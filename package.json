@@ -4,9 +4,9 @@
   "description": "Personal automation scripts",
   "main": "index.js",
   "bin": {
-    "install-my-tool": "./install-my-tool.js",
-    "update-pnpm-global": "./pnpm-global-packages-update.js",
-    "update-winget": "./winget-package-update.js"
+    "install-git-before-delete": "./install-git-before-delete.js",
+    "update-pnpm-global": "./update-pnpm-global.js",
+    "update-winget": "./update-winget.js"
   },
   "keywords": [],
   "author": "",
