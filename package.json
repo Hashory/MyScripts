@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Personal automation scripts",
   "main": "index.js",
+  "scripts": {
+    "setup": "pnpm link --global && node update-pnpm-global.js"
+  },
   "bin": {
     "install-git-before-delete": "./install-git-before-delete.ts",
     "update-pnpm-global": "./update-pnpm-global.js",
