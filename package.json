@@ -2,12 +2,15 @@
   "name": "hashory-scripts",
   "version": "1.0.0",
   "description": "Personal automation scripts",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "setup": "pnpm link --global && node update-pnpm-global.js"
   },
   "bin": {
     "install-git-before-delete": "./install-git-before-delete.ts",
+    "jj-newai": "./jj_newai.ts",
+    "jj-ai-clean": "./jj_ai_cleanup.ts",
     "update-pnpm-global": "./update-pnpm-global.js",
     "update-winget": "./update-winget.ts"
   },
@@ -16,5 +19,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^25.2.2"
+  },
+  "dependencies": {
+    "zx": "^8.8.5"
   }
 }

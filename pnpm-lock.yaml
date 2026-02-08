@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      zx:
+        specifier: ^8.8.5
+        version: 8.8.5
     devDependencies:
       '@types/node':
         specifier: ^25.2.2
@@ -20,6 +24,11 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
+  zx@8.8.5:
+    resolution: {integrity: sha512-SNgDF5L0gfN7FwVOdEFguY3orU5AkfFZm9B5YSHog/UDHv+lvmd82ZAsOenOkQixigwH2+yyH198AwNdKhj+RA==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
+
 snapshots:
 
   '@types/node@25.2.2':
@@ -27,3 +36,5 @@ snapshots:
       undici-types: 7.16.0
 
   undici-types@7.16.0: {}
+
+  zx@8.8.5: {}

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Excute a lot of pnpm global package updates at once
-const { execSync } = require('child_process');
+// Execute a lot of pnpm global package updates at once
+import { execSync } from 'child_process';
 
 const packagesToUpdate = [
   'tsx',
@@ -11,9 +11,9 @@ const packagesToUpdate = [
 
 for (const pkg of packagesToUpdate) {
   try {
-    console.log(`Updating ${pkg}...`);
-    execSync(`pnpm update -g ${pkg}`, { stdio: 'inherit' });
-    console.log(`${pkg} updated successfully.`);
+    console.log(`Ensuring latest version of ${pkg}...`);
+    execSync(`pnpm add -g ${pkg}`, { stdio: 'inherit' });
+    console.log(`${pkg} processed successfully.`);
   } catch (error) {
     console.error(`Failed to update ${pkg}:`, error.message);
     if (error.code) {
