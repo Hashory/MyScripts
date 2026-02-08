@@ -1,0 +1,14 @@
+{
+  "name": "hayabusa-scripts",
+  "version": "1.0.0",
+  "description": "Personal automation scripts",
+  "main": "index.js",
+  "bin": {
+    "install-my-tool": "./install-my-tool.js",
+    "update-pnpm-global": "./pnpm-global-packages-update.js",
+    "update-winget": "./winget-package-update.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

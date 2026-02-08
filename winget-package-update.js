@@ -1,3 +1,4 @@
+#!/usr/bin/env tsx
 const { execSync } = require('child_process');
 
 const packageToUpdate = [

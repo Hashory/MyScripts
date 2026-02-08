@@ -1,7 +1,9 @@
+#!/usr/bin/env node
 // Excute a lot of pnpm global package updates at once
 const { execSync } = require('child_process');
 
 const packagesToUpdate = [
+  'tsx',
   '@google/jules',
   '@angular/cli',
   '@google/gemini-cli'
