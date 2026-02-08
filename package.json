@@ -4,11 +4,14 @@
   "description": "Personal automation scripts",
   "main": "index.js",
   "bin": {
-    "install-git-before-delete": "./install-git-before-delete.js",
+    "install-git-before-delete": "./install-git-before-delete.ts",
     "update-pnpm-global": "./update-pnpm-global.js",
-    "update-winget": "./update-winget.js"
+    "update-winget": "./update-winget.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.2.2"
+  }
 }
