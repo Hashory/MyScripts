@@ -12,7 +12,8 @@
     "jj-newai": "./jj_newai.ts",
     "jj-ai-clean": "./jj_ai_cleanup.ts",
     "update-pnpm-global": "./update-pnpm-global.js",
-    "update-winget": "./update-winget.ts"
+    "update-winget": "./update-winget.ts",
+    "update-opencode": "./update-opencode-web.ts"
   },
   "keywords": [],
   "author": "",
