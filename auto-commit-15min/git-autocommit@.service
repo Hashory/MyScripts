@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto-commit changes in %I
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/hayabusa/program/MyScripts/auto-commit-15min/auto-commit.sh %I
+
+[Install]
+WantedBy=default.target
