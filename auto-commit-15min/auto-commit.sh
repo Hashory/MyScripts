@@ -9,22 +9,7 @@ if [ -z "$RAW_PATH" ]; then
     exit 1
 fi
 
-# systemd-escape --unescape can be picky about the string format.
-# When systemd passes %I, it's often already partially unescaped or in a format 
-# that systemd-escape -u doesn't like if it has literal backslashes from the shell/systemd.
-# We'll use a more robust way to unescape or just use the path if it's already correct.
-
-if [[ "$RAW_PATH" == *"-"* ]] || [[ "$RAW_PATH" == *"\\x"* ]]; then
-    # Try unescaping using systemd-escape. 
-    # We use a subshell and redirection to avoid some "Invalid argument" issues with direct piping in some shells.
-    TARGET_DIR=$(systemd-escape --unescape --path "$RAW_PATH" 2>/dev/null)
-    if [ -z "$TARGET_DIR" ]; then
-        # Fallback: if it fails, maybe it's not escaped or has a format we can't handle with systemd-escape -u
-        TARGET_DIR="$RAW_PATH"
-    fi
-else
-    TARGET_DIR="$RAW_PATH"
-fi
+TARGET_DIR="$RAW_PATH"
 
 COMMIT_MSG="Auto-commit: $(date '+%Y-%m-%d %H:%M:%S')"
 
