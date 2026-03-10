@@ -26,6 +26,8 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     exit 1
 fi
 
+set -e
+
 # Check for changes
 if [[ -n $(git status --porcelain) ]]; then
     echo "Changes detected in '$TARGET_DIR'. Committing and pushing..."
