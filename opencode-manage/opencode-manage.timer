@@ -1,0 +1,10 @@
+[Unit]
+Description=Run opencode-manage script daily at 6AM
+
+[Timer]
+OnCalendar=*-*-* 06:00:00
+Unit=opencode-manage.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target

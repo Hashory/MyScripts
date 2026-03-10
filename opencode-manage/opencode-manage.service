@@ -1,0 +1,7 @@
+[Unit]
+Description=Auto-update opencode-ai daily
+
+[Service]
+Type=oneshot
+ExecStart=/home/hayabusa/program/MyScripts/opencode-manage/update-opencode.sh
+Environment="PATH=/home/hayabusa/.local/share/pnpm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
